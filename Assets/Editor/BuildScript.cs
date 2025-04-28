@@ -69,7 +69,7 @@ public class BuildScript
             Debug.Log("Player settings configured");
             
             // Optimize build settings
-            PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.IL2CPP);
+            PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.Mono2x);
             PlayerSettings.SetApiCompatibilityLevel(BuildTargetGroup.Standalone, ApiCompatibilityLevel.NET_4_6);
             PlayerSettings.stripEngineCode = true;
             PlayerSettings.allowUnsafeCode = false;
@@ -107,6 +107,17 @@ public class BuildScript
             }
             else
             {
+                Debug.LogError($"Build failed with result: {report.summary.result}");
+                Debug.LogError($"Total errors: {report.summary.totalErrors}");
+                Debug.LogError($"Total warnings: {report.summary.totalWarnings}");
+                foreach (var step in report.steps)
+                {
+                    Debug.LogError($"Build step: {step.name}, Duration: {step.duration.TotalSeconds}s");
+                    foreach (var message in step.messages)
+                    {
+                        Debug.LogError($"Message: {message.content}, Type: {message.type}");
+                    }
+                }
                 throw new System.Exception($"Build failed with result: {report.summary.result}");
             }
 
@@ -253,9 +264,9 @@ public class BuildScript
             string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build", "PuzzleGame.app");
             if (Directory.Exists(buildPath))
             {
-                string command = $"open {buildPath}";
-                System.Diagnostics.Process.Start("terminal", $"-e {command}");
-                Debug.Log($"Game started from terminal successfully! Build log: {logFile}");
+                // Use the 'open' command on macOS
+                System.Diagnostics.Process.Start("open", buildPath);
+                Debug.Log($"Game started successfully! Build log: {logFile}");
             }
             else
             {
