@@ -306,14 +306,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00000000000000000000000000000000, type: 3}
+  m_Script: {fileID: 11500000, guid: a4dec8f6e9bb94dd898b9f0ea76d8585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boardWidth: 8
   boardHeight: 8
   candySize: 1
-  candyPrefab: {fileID: 0}
-  specialCandyPrefab: {fileID: 0}
+  candyPrefab: {fileID: 1001, guid: 9b4cea22657cc4b0fad0bf8aa55880f0, type: 3}
+  specialCandyPrefab: {fileID: 1001, guid: 980cf4fbc05c04daba933edfb81779bd, type: 3}
   matchSound: {fileID: 0}
   swapSound: {fileID: 0}
-  matchEffect: {fileID: 0} 
+  matchEffect: {fileID: 1001, guid: 00000000000000000000000000000000, type: 3} 

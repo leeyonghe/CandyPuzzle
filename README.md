@@ -45,3 +45,6 @@ Unity 기반의 퍼즐 게임 프로젝트입니다. [디버깅중]
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 이 프로젝트는 MIT 라이센스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요. 
+
+## 빌드 스크립트
+/Applications/Unity/Hub/Editor/2022.3.6f1/Unity.app/Contents/MacOS/Unity -batchmode -projectPath . -executeMethod BuildScript.TerminalBuild -quit       
