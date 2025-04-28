@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 using System.IO;
+using UnityEditor.Build.Reporting;
 
 public class BuildScript
 {
@@ -54,31 +55,37 @@ public class BuildScript
     {
         try
         {
+            Debug.Log("Starting build process...");
+            
             // Validate build
             ValidateBuild();
+            Debug.Log("Build validation passed");
 
             // Set player settings
             PlayerSettings.productName = "Puzzle Game";
             PlayerSettings.companyName = "Your Company";
-            PlayerSettings.bundleIdentifier = "com.yourcompany.puzzlegame";
+            PlayerSettings.applicationIdentifier = "com.yourcompany.puzzlegame";
             PlayerSettings.macOS.buildNumber = "1";
-            PlayerSettings.macOS.appleDeveloperTeamID = ""; // Add your team ID if needed
+            Debug.Log("Player settings configured");
             
             // Optimize build settings
             PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.IL2CPP);
             PlayerSettings.SetApiCompatibilityLevel(BuildTargetGroup.Standalone, ApiCompatibilityLevel.NET_4_6);
             PlayerSettings.stripEngineCode = true;
             PlayerSettings.allowUnsafeCode = false;
+            Debug.Log("Build settings optimized");
             
             // Create build directory if it doesn't exist
-            string buildPath = "Build";
+            string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build");
             if (!Directory.Exists(buildPath))
             {
                 Directory.CreateDirectory(buildPath);
+                Debug.Log($"Created build directory at: {buildPath}");
             }
 
             // Get scenes
             string[] scenes = new string[] { "Assets/Scenes/GameScene.unity" };
+            Debug.Log($"Building with scene: {scenes[0]}");
 
             // Build options
             BuildOptions buildOptions = BuildOptions.None;
@@ -89,19 +96,34 @@ public class BuildScript
             #endif
 
             // Build for macOS
-            BuildPipeline.BuildPlayer(scenes, 
-                Path.Combine(buildPath, "PuzzleGame.app"), 
-                BuildTarget.StandaloneOSX, 
-                buildOptions);
+            string appPath = Path.Combine(buildPath, "PuzzleGame.app");
+            Debug.Log($"Starting build to: {appPath}");
+            
+            BuildReport report = BuildPipeline.BuildPlayer(scenes, appPath, BuildTarget.StandaloneOSX, buildOptions);
+            
+            if (report.summary.result == BuildResult.Succeeded)
+            {
+                Debug.Log("Build completed successfully!");
+            }
+            else
+            {
+                throw new System.Exception($"Build failed with result: {report.summary.result}");
+            }
+
+            // Verify build
+            if (!Directory.Exists(appPath))
+            {
+                throw new System.Exception($"Build verification failed: {appPath} not found");
+            }
 
             // Post-build processing
             PostBuildProcessing(buildPath);
 
-            Debug.Log("Build completed successfully!");
+            Debug.Log($"Build completed successfully! App path: {appPath}");
         }
         catch (System.Exception e)
         {
-            Debug.LogError("Build failed: " + e.Message);
+            Debug.LogError($"Build failed: {e.Message}\nStackTrace: {e.StackTrace}");
             throw;
         }
     }
@@ -229,7 +251,7 @@ public class BuildScript
 
             // Run the built game from terminal
             string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build", "PuzzleGame.app");
-            if (File.Exists(buildPath))
+            if (Directory.Exists(buildPath))
             {
                 string command = $"open {buildPath}";
                 System.Diagnostics.Process.Start("terminal", $"-e {command}");
@@ -237,7 +259,7 @@ public class BuildScript
             }
             else
             {
-                throw new System.Exception("Built game not found!");
+                throw new System.Exception($"Built game not found at: {buildPath}");
             }
         }
         catch (System.Exception e)

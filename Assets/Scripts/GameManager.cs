@@ -251,53 +251,88 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        // Calculate score
-        int score = totalMatches * 10;
-        if (totalMatches >= 4)
+        if (totalMatches > 0)
         {
-            score *= 2; // Bonus for 4 or more matches
-            CreateSpecialCandy(matchedPositions[0]);
-            LevelManager.Instance.AddSpecialCandy();
-        }
-        
-        // Add combo
-        UIManager.Instance.AddCombo();
-        UIManager.Instance.AddScore(score);
-        LevelManager.Instance.AddMatch();
+            audioSource.PlayOneShot(matchSound);
+            if (matchEffect != null)
+            {
+                matchEffect.Play();
+            }
 
-        // Play effects
-        audioSource.PlayOneShot(matchSound);
-        foreach (Vector2Int pos in matchedPositions)
-        {
-            Instantiate(matchEffect, board[pos.x, pos.y].transform.position, Quaternion.identity);
-            board[pos.x, pos.y].SetType(CandyType.None);
-        }
+            foreach (Vector2Int pos in matchedPositions)
+            {
+                if (board[pos.x, pos.y] != null)
+                {
+                    Destroy(board[pos.x, pos.y].gameObject);
+                    board[pos.x, pos.y] = null;
+                }
+            }
 
-        StartCoroutine(FillEmptySpaces());
+            StartCoroutine(FillEmptySpaces());
+        }
     }
 
     private void CreateSpecialCandy(Vector2Int position)
     {
+        if (specialCandyPrefab == null) return;
+
         GameObject specialCandy = Instantiate(specialCandyPrefab, 
-            new Vector3(position.x * candySize, position.y * candySize, 0), 
+            new Vector3(position.x, position.y, 0), 
             Quaternion.identity);
-        board[position.x, position.y] = specialCandy.GetComponent<CandyTile>();
-        board[position.x, position.y].Initialize(position.x, position.y);
+        
+        SpecialCandyTile specialTile = specialCandy.GetComponent<SpecialCandyTile>();
+        if (specialTile != null)
+        {
+            board[position.x, position.y] = specialTile;
+            specialTile.Initialize(position.x, position.y);
+        }
     }
 
     private System.Collections.IEnumerator FillEmptySpaces()
     {
         yield return new WaitForSeconds(0.5f);
+
         for (int x = 0; x < boardWidth; x++)
         {
             for (int y = 0; y < boardHeight; y++)
             {
-                if (board[x, y].Type == CandyType.None)
+                if (board[x, y] == null)
                 {
-                    board[x, y].SetRandomType();
+                    for (int i = y + 1; i < boardHeight; i++)
+                    {
+                        if (board[x, i] != null)
+                        {
+                            board[x, y] = board[x, i];
+                            board[x, i] = null;
+                            board[x, y].SetPosition(x, y);
+                            break;
+                        }
+                    }
                 }
             }
         }
+
+        for (int x = 0; x < boardWidth; x++)
+        {
+            for (int y = 0; y < boardHeight; y++)
+            {
+                if (board[x, y] == null)
+                {
+                    Vector3 position = new Vector3(
+                        -(boardWidth * candySize) / 2f + candySize / 2f + x * candySize,
+                        -(boardHeight * candySize) / 2f + candySize / 2f + y * candySize,
+                        0
+                    );
+
+                    GameObject candy = Instantiate(candyPrefab, position, Quaternion.identity);
+                    board[x, y] = candy.GetComponent<CandyTile>();
+                    board[x, y].Initialize(x, y);
+                }
+            }
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
         if (CheckMatches())
         {
             RemoveMatches();

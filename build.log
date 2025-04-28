@@ -1,0 +1,803 @@
+Unity Editor version:    2022.3.43f1 (85497d293fa1)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 15.4.1 (Build 24E263)
+Darwin version:          24.4.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-lee" failed because channel doesn't exist; code: "0x80000002"
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Frameworks/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client
+[Licensing::Module] Successfully launched the LicensingClient (PId: 69263)
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-lee" at "2025-04-28T05:45:39.764788Z"
+[Licensing::Client] Error: Code 1 while verifying Licensing Client signature (process Id: 69263, path: "/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Frameworks/UnityLicensingClient.app/Contents/MacOS/Unity.Licensing.Client")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.15.5+a2f8afb
+  Session Id:              b80f4c63ce6543109a1963e78cb78bfd
+  Correlation Id:          d330ac9cd3166d7138e1adcceac302d6
+  External correlation Id: 5953027592771441774
+  Machine Id:              3Mi0idXGYfmwJ6m5RT7lK3QII8E=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-lee" (connect: 0.42s, validation: 0.03s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-lee-notifications" at "2025-04-28T05:45:39.810012Z"
+[Licensing::Module] Connected to LicensingClient (PId: 69263, launch time: 0.00, total connection time: 0.46s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully updated license
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Serial number assigned to: "F4-6JQW-CUCD-N5V3-KDFY-XXXX"
+Pro License: NO
+[Licensing::Client] Successfully resolved entitlement details
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Resources/PackageManager/Server/UnityPackageManager
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/MacOS/Unity
+-batchmode
+-projectPath
+/Users/lee/Desktop/Puzzle
+-executeMethod
+BuildScript.TerminalBuild
+-logFile
+/Users/lee/Desktop/Puzzle/build.log
+-quit
+Successfully changed project path to: /Users/lee/Desktop/Puzzle
+/Users/lee/Desktop/Puzzle
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8343833728]  Target information:
+
+Player connection [8343833728]  * "[IP] 192.168.0.106 [Port] 55504 [Flags] 2 [Guid] 2513431051 [EditorId] 2513431051 [Version] 1048832 [Id] OSXEditor(0,lees-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8343833728] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8343833728] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[Package Manager] UpmClient::Connect -- Connected to IPC stream "Upm-69262" after 0.4 seconds.
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 47 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.collab-proxy@2.7.1 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.collab-proxy@2.7.1)
+    com.unity.textmeshpro@3.0.9 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.textmeshpro@3.0.9)
+    com.unity.timeline@1.7.6 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.timeline@1.7.6)
+    com.unity.visualscripting@1.9.4 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.visualscripting@1.9.4)
+    com.unity.ide.visualstudio@2.0.22 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.ide.visualstudio@2.0.22)
+    com.unity.ide.rider@3.0.31 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.ide.rider@3.0.31)
+    com.unity.ide.vscode@1.2.5 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.ide.vscode@1.2.5)
+    com.unity.editorcoroutines@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.editorcoroutines@1.0.0)
+    com.unity.performance.profile-analyzer@1.2.2 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.performance.profile-analyzer@1.2.2)
+    com.unity.test-framework@1.1.33 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.test-framework@1.1.33)
+    com.unity.testtools.codecoverage@1.2.6 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.testtools.codecoverage@1.2.6)
+    com.unity.settings-manager@2.0.1 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.settings-manager@2.0.1)
+    com.unity.ext.nunit@1.0.6 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.ext.nunit@1.0.6)
+  Built-in packages:
+    com.unity.feature.development@1.0.1 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.feature.development@1.0.1)
+    com.unity.ugui@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.ugui@1.0.0)
+    com.unity.modules.ai@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.imgui@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.uielements@1.0.0)
+    com.unity.modules.umbra@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.umbra@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.xr@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: /Users/lee/Desktop/Puzzle/Library/PackageCache/com.unity.modules.subsystems@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+Package Manager log level set to [2]
+[Package Manager] Done registering packages in 0.13 seconds
+Refreshing native plugins compatible for Editor in 7.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.43f1 (85497d293fa1)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/lee/Desktop/Puzzle/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 Pro (high power)
+Metal devices available: 1
+0: Apple M1 Pro (high power)
+Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+[Licensing::Client] Successfully resolved entitlement details
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56262
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.43f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.43f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+[Licensing::Client] Successfully resolved entitlement details
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.43f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.032397 seconds.
+- Loaded All Assemblies, in  0.251 seconds
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 69 ms
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.288 seconds
+Domain Reload Profiling: 539ms
+	BeginReloadAssembly (64ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (96ms)
+		LoadAssemblies (65ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (94ms)
+			TypeCache.Refresh (93ms)
+				TypeCache.ScanAssembly (84ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (289ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (260ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (163ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (66ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://unix:/tmp/ilpp.sock-d30ce553238f452618f98635ce871989
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Content root path: /Users/lee/Desktop/Puzzle/
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 25.8754ms
+Starting: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/lee/Desktop/Puzzle
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s92ms
+*** Tundra build success (0.08 seconds), 0 items updated, 360 evaluated
+AssetDatabase: script compilation time: 0.549847s
+Total cache size 147366804
+Total cache size after purge 147366804
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.364 seconds
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.377 seconds
+Domain Reload Profiling: 741ms
+	BeginReloadAssembly (84ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (15ms)
+	LoadAllAssembliesAndSetupDomain (232ms)
+		LoadAssemblies (152ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (118ms)
+			TypeCache.Refresh (107ms)
+				TypeCache.ScanAssembly (97ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (377ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (278ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (41ms)
+			ProcessInitializeOnLoadAttributes (199ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Asset Pipeline Refresh (id=64a6c4e0ac3cf4b5cb70bf28b734ec64): Total: 2.222 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=863 ms
+		Asset DB Callback time: managed=7 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=774 ms, compile time=550 ms, other=26 ms
+		Project Asset Count: scripts=3740, non-scripts=604
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokeBeforeRefreshCallbacks: 0.176ms
+	ApplyChangesToAssetFolders: 0.047ms
+	Scan: 134.797ms
+	OnSourceAssetsModified: 0.001ms
+	GetAllGuidsForCategorization: 0.216ms
+	CategorizeAssets: 63.809ms
+	ImportOutOfDateAssets: 391.428ms (-167.894ms without children)
+		CompileScripts: 549.919ms
+		ReloadNativeAssets: 0.000ms
+		UnloadImportedAssets: 8.041ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.891ms
+		InitializingProgressBar: 0.000ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.000ms
+		OnDemandSchedulerStart: 0.469ms
+	PostProcessAllAssets: 7.497ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.007ms
+	UnloadStreamsBegin: 0.221ms
+	PersistCurrentRevisions: 0.109ms
+	UnloadStreamsEnd: 0.008ms
+	GenerateScriptTypeHashes: 0.387ms
+	Untracked: 1623.525ms
+Application.AssetDatabase Initial Refresh End
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
+Scanning for USB devices : 0.274ms
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Puzzle Game
+2025-04-28 14:45:45.376 Unity[69262:41193676] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x13ffbb160 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ProgressiveSceneManager::Cancel()
+-- Listing OpenCL platforms(s) --
+ * OpenCL platform 0
+	PROFILE = FULL_PROFILE
+	VERSION = OpenCL 1.2 (Mar  7 2025 21:04:06)
+	NAME = Apple
+	VENDOR = Apple
+-- Listing OpenCL device(s) --
+ * OpenCL platform 0, device 0 
+	DEVICE_TYPE = 4
+	DEVICE_NAME = Apple M1 Pro
+	DEVICE_VENDOR = Apple
+	DEVICE_VERSION = OpenCL 1.2 
+	DRIVER_VERSION = 1.2 1.0
+	DEVICE_MAX_COMPUTE_UNITS = 14
+	DEVICE_MAX_CLOCK_FREQUENCY = 1000
+	CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE = 1073741824
+	CL_DEVICE_HOST_UNIFIED_MEMORY = true
+	CL_DEVICE_MAX_MEM_ALLOC_SIZE = 2147483648
+	DEVICE_GLOBAL_MEM_SIZE = 11453251584
+-- GPU Progressive lightmapper will use OpenCL device 'Apple M1 Pro' from 'Apple'--
+   use -OpenCL-PlatformAndDeviceIndices <platformIdx> <deviceIdx> as command line arguments if you want to select a specific adapter for OpenCL.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (379.8 KB). Loaded Objects now: 3639.
+Memory consumption went from 120.1 MB to 119.7 MB.
+Total: 2.627042 ms (FindLiveObjects: 0.096625 ms CreateObjectMapping: 0.036083 ms MarkObjects: 2.310584 ms  DeleteObjects: 0.183084 ms)
+
+Starting build process...
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:58)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 58)
+
+Build validation passed
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:62)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 62)
+
+PlayerSettings.applicationIdentifier only changes the identifier for the currently active platform. Please use SetApplicationIdentifier to set it for any platform
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEditor.PlayerSettings:set_applicationIdentifier (string) (at /Users/bokken/build/output/unity/unity/Editor/Mono/PlayerSettings.bindings.cs:1402)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:67)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: /Users/bokken/build/output/unity/unity/Editor/Mono/PlayerSettings.bindings.cs Line: 1402)
+
+Player settings configured
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:69)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 69)
+
+Build settings optimized
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:76)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 76)
+
+Building with scene: Assets/Scenes/GameScene.unity
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:88)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 88)
+
+Starting build to: /Users/lee/Desktop/Puzzle/Build/PuzzleGame.app
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:100)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 100)
+
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) Importer(-1,00000000000000000000000000000000) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'c4183b01ea3a4612c930b5f407af6968') in 0.003625 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=6061f468904024d949a6bda9c5c4817d): Total: 0.057 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Found installed macOS SDK 15.4.
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 1.1232ms
+Starting: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aEDbgSkipCompile.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: /Users/lee/Desktop/Puzzle
+ExitCode: 0 Duration: 0s54ms
+*** Tundra build success (0.04 seconds), 0 items updated, 3 evaluated
+Total cache size 147366804
+Total cache size after purge 147366804
+Asset Pipeline Refresh (id=be8e984ffaed140fa929e80434ab657f): Total: 0.043 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+[ScriptCompilation] Requested script compilation because: Recompiling scripts for player build.
+BuildPlayer: start building target 2
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.2758ms
+Starting: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/bee_backend --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aPDevDbg.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssembliesAndTypeDB
+WorkingDir: /Users/lee/Desktop/Puzzle
+ExitCode: 0 Duration: 0s66ms
+[109/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.TestRunner.dll
+[112/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll
+[113/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.TestRunner.pdb
+[116/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb
+[117/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb
+[118/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll
+[119/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll
+[120/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb
+[124/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll
+[125/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb
+[131/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll
+[132/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb
+[134/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb
+[135/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll
+[137/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll
+[138/141    0s] CopyFiles Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb
+*** Tundra build success (0.05 seconds), 16 items updated, 141 evaluated
+Total cache size 147366804
+Total cache size after purge 147366804
+Not rebuilding Data files -- no changes
+2025-04-28 14:45:46.040 Unity[69262:41193676] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x14c89ac70 Font Asset, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Asset Pipeline Refresh (id=7c9edd1ebf4bb4d408faee7ebc5b3b87): Total: 0.061 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+
+
+Mono dependencies included in the build
+Dependency assembly - System.Net.Primitives.dll
+Dependency assembly - System.Diagnostics.FileVersionInfo.dll
+Dependency assembly - System.Xml.dll
+Dependency assembly - System.ValueTuple.dll
+Dependency assembly - System.IO.Compression.dll
+Dependency assembly - netstandard.dll
+Dependency assembly - System.Xml.XPath.XmlDocument.dll
+Dependency assembly - System.Security.Cryptography.Encryption.Aes.dll
+Dependency assembly - System.Threading.AccessControl.dll
+Dependency assembly - System.Security.Cryptography.ProtectedData.dll
+Dependency assembly - System.Reflection.TypeExtensions.dll
+Dependency assembly - System.Dynamic.Runtime.dll
+Dependency assembly - System.Xml.Serialization.dll
+Dependency assembly - System.Runtime.InteropServices.dll
+Dependency assembly - System.Threading.Tasks.Extensions.dll
+Dependency assembly - System.ComponentModel.EventBasedAsync.dll
+Dependency assembly - System.Runtime.Numerics.dll
+Dependency assembly - System.Threading.Tasks.Parallel.dll
+Dependency assembly - System.Globalization.dll
+Dependency assembly - System.Security.Claims.dll
+Dependency assembly - System.Security.AccessControl.dll
+Dependency assembly - System.ComponentModel.dll
+Dependency assembly - System.ServiceModel.Routing.dll
+Dependency assembly - System.Runtime.Loader.dll
+Dependency assembly - Unity.Timeline.dll
+Dependency assembly - System.Drawing.dll
+Dependency assembly - System.IO.Compression.ZipFile.dll
+Dependency assembly - System.Json.dll
+Dependency assembly - System.DirectoryServices.dll
+Dependency assembly - System.Text.Encoding.Extensions.dll
+Dependency assembly - System.Runtime.DurableInstancing.dll
+Dependency assembly - System.IO.Pipes.dll
+Dependency assembly - System.IdentityModel.dll
+Dependency assembly - System.Collections.NonGeneric.dll
+Dependency assembly - System.IO.UnmanagedMemoryStream.dll
+Dependency assembly - System.Configuration.dll
+Dependency assembly - System.Resources.Writer.dll
+Dependency assembly - System.Linq.Expressions.dll
+Dependency assembly - System.Security.Cryptography.Algorithms.dll
+Dependency assembly - System.Data.dll
+Dependency assembly - System.Diagnostics.TextWriterTraceListener.dll
+Dependency assembly - System.Xml.XDocument.dll
+Dependency assembly - System.Core.dll
+Dependency assembly - System.Drawing.Design.dll
+Dependency assembly - System.Security.Cryptography.Encoding.dll
+Dependency assembly - System.Runtime.InteropServices.RuntimeInformation.dll
+Dependency assembly - System.Management.dll
+Dependency assembly - System.Runtime.dll
+Dependency assembly - System.Net.Security.dll
+Dependency assembly - UnityEngine.UI.dll
+Dependency assembly - System.Net.WebHeaderCollection.dll
+Dependency assembly - System.Numerics.Vectors.dll
+Dependency assembly - System.ComponentModel.Annotations.dll
+Dependency assembly - System.ServiceProcess.dll
+Dependency assembly - Microsoft.CSharp.dll
+Dependency assembly - System.Text.RegularExpressions.dll
+Dependency assembly - System.EnterpriseServices.dll
+Dependency assembly - System.ServiceModel.Security.dll
+Dependency assembly - System.Reflection.Extensions.dll
+Dependency assembly - System.Threading.Overlapped.dll
+Dependency assembly - System.Linq.Parallel.dll
+Dependency assembly - System.Reflection.Emit.Lightweight.dll
+Dependency assembly - System.Runtime.Handles.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDiffieHellman.dll
+Dependency assembly - System.ServiceModel.Http.dll
+Dependency assembly - System.IO.Compression.FileSystem.dll
+Dependency assembly - System.ServiceModel.Web.dll
+Dependency assembly - System.Net.Utilities.dll
+Dependency assembly - System.Diagnostics.Tracing.dll
+Dependency assembly - Assembly-CSharp.dll
+Dependency assembly - System.Runtime.Remoting.dll
+Dependency assembly - System.Net.Requests.dll
+Dependency assembly - System.Collections.Concurrent.dll
+Dependency assembly - System.ObjectModel.dll
+Dependency assembly - System.Diagnostics.Debug.dll
+Dependency assembly - System.Net.Cache.dll
+Dependency assembly - System.IO.MemoryMappedFiles.dll
+Dependency assembly - System.Data.Entity.dll
+Dependency assembly - System.Threading.dll
+Dependency assembly - Mono.Security.dll
+Dependency assembly - Unity.VisualScripting.State.dll
+Dependency assembly - System.Net.AuthenticationManager.dll
+Dependency assembly - System.Reflection.Emit.ILGeneration.dll
+Dependency assembly - System.Runtime.CompilerServices.VisualC.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.Soap.dll
+Dependency assembly - System.Net.Mail.dll
+Dependency assembly - System.Reflection.Emit.dll
+Dependency assembly - System.Windows.Forms.DataVisualization.dll
+Dependency assembly - System.Threading.Timer.dll
+Dependency assembly - System.Xml.ReaderWriter.dll
+Dependency assembly - System.Runtime.Caching.dll
+Dependency assembly - System.IO.FileSystem.dll
+Dependency assembly - System.Web.Extensions.dll
+Dependency assembly - System.Globalization.Extensions.dll
+Dependency assembly - System.Linq.Queryable.dll
+Dependency assembly - System.Security.Cryptography.Cng.dll
+Dependency assembly - System.IO.IsolatedStorage.dll
+Dependency assembly - System.Web.Extensions.Design.dll
+Dependency assembly - System.Security.Cryptography.RSA.dll
+Dependency assembly - System.Security.Cryptography.Primitives.dll
+Dependency assembly - System.Web.RegularExpressions.dll
+Dependency assembly - System.ServiceModel.NetTcp.dll
+Dependency assembly - Unity.TextMeshPro.dll
+Dependency assembly - Microsoft.Win32.Primitives.dll
+Dependency assembly - System.Runtime.InteropServices.WindowsRuntime.dll
+Dependency assembly - System.Diagnostics.StackTrace.dll
+Dependency assembly - System.Security.Cryptography.Hashing.Algorithms.dll
+Dependency assembly - System.Xml.XPath.XDocument.dll
+Dependency assembly - System.ServiceModel.Activation.dll
+Dependency assembly - Mono.Data.Sqlite.dll
+Dependency assembly - System.Messaging.dll
+Dependency assembly - System.Threading.ThreadPool.dll
+Dependency assembly - System.Net.Http.WebRequest.dll
+Dependency assembly - System.Net.Sockets.dll
+Dependency assembly - System.Resources.Reader.dll
+Dependency assembly - System.Web.dll
+Dependency assembly - System.ServiceModel.Internals.dll
+Dependency assembly - Microsoft.Win32.Registry.AccessControl.dll
+Dependency assembly - System.IO.FileSystem.AccessControl.dll
+Dependency assembly - System.ServiceModel.Discovery.dll
+Dependency assembly - Mono.Data.Tds.dll
+Dependency assembly - System.Security.Cryptography.Csp.dll
+Dependency assembly - System.Windows.dll
+Dependency assembly - System.IO.FileSystem.DriveInfo.dll
+Dependency assembly - System.Security.SecureString.dll
+Dependency assembly - Unity.VisualScripting.Flow.dll
+Dependency assembly - System.Security.Cryptography.Hashing.dll
+Dependency assembly - System.ServiceModel.dll
+Dependency assembly - System.Net.Http.dll
+Dependency assembly - System.Diagnostics.TraceEvent.dll
+Dependency assembly - System.IO.FileSystem.Watcher.dll
+Dependency assembly - System.Xml.XPath.dll
+Dependency assembly - System.Data.OracleClient.dll
+Dependency assembly - System.Net.Ping.dll
+Dependency assembly - System.Net.NameResolution.dll
+Dependency assembly - System.Security.Cryptography.DeriveBytes.dll
+Dependency assembly - System.ComponentModel.Composition.dll
+Dependency assembly - System.Configuration.Install.dll
+Dependency assembly - System.Net.NetworkInformation.dll
+Dependency assembly - Accessibility.dll
+Dependency assembly - System.Numerics.dll
+Dependency assembly - System.Diagnostics.Process.dll
+Dependency assembly - System.Security.Cryptography.OpenSsl.dll
+Dependency assembly - System.Data.DataSetExtensions.dll
+Dependency assembly - System.Net.WebSockets.dll
+Dependency assembly - Unity.VisualScripting.Core.dll
+Dependency assembly - System.Xml.XmlSerializer.dll
+Dependency assembly - System.IO.dll
+Dependency assembly - System.Security.Cryptography.RandomNumberGenerator.dll
+Dependency assembly - System.Text.Encoding.CodePages.dll
+Dependency assembly - System.dll
+Dependency assembly - System.Security.Cryptography.Encryption.ECDsa.dll
+Dependency assembly - System.Buffers.dll
+Dependency assembly - System.Security.Principal.dll
+Dependency assembly - System.Diagnostics.TraceSource.dll
+Dependency assembly - System.Diagnostics.Tools.dll
+Dependency assembly - System.Text.Encoding.dll
+Dependency assembly - System.Reflection.Primitives.dll
+Dependency assembly - System.Globalization.Calendars.dll
+Dependency assembly - System.Linq.dll
+Dependency assembly - System.Net.WebSockets.Client.dll
+Dependency assembly - System.IdentityModel.Selectors.dll
+Dependency assembly - System.Resources.ReaderWriter.dll
+Dependency assembly - System.Xml.Linq.dll
+Dependency assembly - System.Transactions.dll
+Dependency assembly - System.Design.dll
+Dependency assembly - System.Reflection.Context.dll
+Dependency assembly - System.AppContext.dll
+Dependency assembly - System.Data.Linq.dll
+Dependency assembly - System.Security.Cryptography.Pkcs.dll
+Dependency assembly - System.Reflection.dll
+Dependency assembly - System.Runtime.Serialization.Formatters.dll
+Dependency assembly - System.Collections.dll
+Dependency assembly - System.Net.HttpListener.dll
+Dependency assembly - System.ComponentModel.Primitives.dll
+Dependency assembly - System.Console.dll
+Dependency assembly - System.Threading.Tasks.dll
+Dependency assembly - System.Security.Principal.Windows.dll
+Dependency assembly - System.Drawing.Primitives.dll
+Dependency assembly - System.Web.DynamicData.dll
+Dependency assembly - System.Runtime.Serialization.Xml.dll
+Dependency assembly - System.Data.Common.dll
+Dependency assembly - System.Reflection.DispatchProxy.dll
+Dependency assembly - System.IO.FileSystem.Primitives.dll
+Dependency assembly - System.Runtime.Serialization.Json.dll
+Dependency assembly - System.Security.Cryptography.Encryption.dll
+Dependency assembly - System.Resources.ResourceManager.dll
+Dependency assembly - System.Runtime.Extensions.dll
+Dependency assembly - System.ServiceProcess.ServiceController.dll
+Dependency assembly - System.ComponentModel.TypeConverter.dll
+Dependency assembly - System.Xaml.dll
+Dependency assembly - System.DirectoryServices.Protocols.dll
+Dependency assembly - System.ComponentModel.DataAnnotations.dll
+Dependency assembly - System.Security.Cryptography.X509Certificates.dll
+Dependency assembly - System.Data.SqlClient.dll
+Dependency assembly - System.Xml.Xsl.Primitives.dll
+Dependency assembly - System.ServiceModel.Primitives.dll
+Dependency assembly - Microsoft.Win32.Registry.dll
+Dependency assembly - System.Net.ServicePoint.dll
+Dependency assembly - System.Xml.XmlDocument.dll
+Dependency assembly - System.Data.Services.Client.dll
+Dependency assembly - System.Runtime.Serialization.Primitives.dll
+Dependency assembly - System.Security.dll
+Dependency assembly - System.Net.dll
+Dependency assembly - System.Web.Services.dll
+Dependency assembly - System.ServiceModel.Duplex.dll
+Dependency assembly - System.Collections.Specialized.dll
+Dependency assembly - Unity.VisualScripting.Antlr3.Runtime.dll
+Dependency assembly - System.Runtime.Serialization.dll
+Dependency assembly - System.Web.ApplicationServices.dll
+Dependency assembly - System.Diagnostics.Contracts.dll
+Dependency assembly - System.Data.Services.dll
+Dependency assembly - System.Memory.dll
+Dependency assembly - mscorlib.dll
+Dependency assembly - System.Threading.Thread.dll
+Dependency assembly - System.Windows.Forms.dll
+
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+[40m[32minfo[39m[22m[49m: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.1640ms
+Starting: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/bee_backend --dont-print-to-structured-log --ipc --dagfile="Library/Bee/Player8a53c954.dag" --profile="Library/Bee/backend1.traceevents" Player
+WorkingDir: /Users/lee/Desktop/Puzzle
+DisplayProgressbar: Incremental Player Build
+[1237/1244  0s] AddBootConfigGUID Library/Bee/artifacts/MacStandalonePlayerBuildProgram/boot.config
+[1238/1244  0s] CopyFiles Build/PuzzleGame.app/Contents/Resources/Data/boot.config
+[1239/1244  0s] CodeSign Library/Bee/artifacts/codesign/91689557-834151737/GameAssembly.dylib
+Library/Bee/artifacts/lipo/91689557-834151737/GameAssembly.dylib: replacing existing signature
+[1240/1244  0s] CopyFiles /Users/lee/Desktop/Puzzle/Library/Bee/artifacts/MacStandalonePlayerBuildProgram/il2cppOutput/GameAssembly.dylib
+[1241/1244  0s] MacOSCodeSignDylibCopy /Users/lee/Desktop/Puzzle/Library/Bee/artifacts/MacStandalonePlayerBuildProgram/il2cppOutput/build/GameAssembly.dylib
+[1242/1244  0s] CopyFiles Build/PuzzleGame.app/Contents/Frameworks/GameAssembly.dylib
+[1243/1244  0s] MacOSCodeSignBundleInPlace Build/PuzzleGame.app/Contents/MacOS/Puzzle Game (+1 other)
+*** Tundra build success (0.68 seconds), 7 items updated, 1244 evaluated
+Total cache size 147366804
+Total cache size after purge 147366804
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+
+-------------------------------------------------------------------------------
+Build Report
+Information on used Assets is not available, since player data was not rebuilt.
+Do a clean build to view the Asset build report information.
+-------------------------------------------------------------------------------
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (0.5 MB). Loaded Objects now: 3656.
+Memory consumption went from 132.8 MB to 132.3 MB.
+Total: 4.120500 ms (FindLiveObjects: 0.116375 ms CreateObjectMapping: 0.050166 ms MarkObjects: 3.459917 ms  DeleteObjects: 0.493500 ms)
+
+Build Finished, Result: Success.
+ExitCode: 0 Duration: 0s798ms
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/il2cpp/build/deploy/Analytics
+##utp:{"type":"PlayerBuildInfo","version":2,"phase":"Immediate","time":1745819147218,"processId":69262,"steps":[{"description":"Preprocess Player","duration":8},{"description":"Prepare For Build","duration":29},{"description":"ProducePlayerScriptAssemblies","duration":426},{"description":"Verify Build setup","duration":68},{"description":"Prepare assets for target platform","duration":64},{"description":"Prepare splash screen","duration":16},{"description":"Run script only build","duration":14},{"description":"Postprocess built player","duration":856}],"duration":1481}
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.285 ms
+	Integration:            3.326 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.022 ms
+	Total Operation Time:   3.633 ms
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 3656.
+Memory consumption went from 132.0 MB to 132.0 MB.
+Total: 3.275208 ms (FindLiveObjects: 0.087375 ms CreateObjectMapping: 0.033709 ms MarkObjects: 3.144041 ms  DeleteObjects: 0.009500 ms)
+
+Build completed successfully!
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:106)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 106)
+
+Build info saved to: /Users/lee/Desktop/Puzzle/Build/build_info.txt
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:PostBuildProcessing (string) (at Assets/Editor/BuildScript.cs:45)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:120)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 45)
+
+Build completed successfully! App path: /Users/lee/Desktop/Puzzle/Build/PuzzleGame.app
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+BuildScript:BuildAll () (at Assets/Editor/BuildScript.cs:122)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:245)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 122)
+
+The files /Users/lee/Desktop/Puzzle/terminal and /Users/lee/Desktop/Puzzle/open do not exist.
+Terminal build failed: Cannot find the specified file
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:37)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+BuildScript:TerminalBuild () (at Assets/Editor/BuildScript.cs:267)
+
+(Filename: Assets/Editor/BuildScript.cs Line: 267)
+
+Win32Exception: Cannot find the specified file
+  at System.Diagnostics.Process.StartWithShellExecuteEx (System.Diagnostics.ProcessStartInfo startInfo) [0x00102] in <5b9376b7f30d457c88152933d66a254d>:0 
+  at System.Diagnostics.Process.Start () [0x00032] in <5b9376b7f30d457c88152933d66a254d>:0 
+  at (wrapper remoting-invoke-with-check) System.Diagnostics.Process.Start()
+  at System.Diagnostics.Process.Start (System.Diagnostics.ProcessStartInfo startInfo) [0x0001b] in <5b9376b7f30d457c88152933d66a254d>:0 
+  at System.Diagnostics.Process.Start (System.String fileName, System.String arguments) [0x00007] in <5b9376b7f30d457c88152933d66a254d>:0 
+  at BuildScript.TerminalBuild () [0x00188] in /Users/lee/Desktop/Puzzle/Assets/Editor/BuildScript.cs:268 
+
+(Filename: Assets/Editor/BuildScript.cs Line: 268)
+
+executeMethod method BuildScript.TerminalBuild threw exception.
+[Package Manager] Server::Kill -- Server was shutdown
+[40m[32minfo[39m[22m[49m: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
