@@ -47,4 +47,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 이 프로젝트는 MIT 라이센스 하에 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요. 
 
 ## 빌드 스크립트
-/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/MacOS/Unity -batchmode -projectPath /Users/lee/Desktop/Puzzle -executeMethod BuildScript.TerminalBuild -logFile /Users/lee/Desktop/Puzzle/build.log -quit
+/Applications/Unity/Hub/Editor/2022.3.43f1/Unity.app/Contents/MacOS/Unity -batchmode -projectPath /Users/lee/Desktop/CandyPuzzle -executeMethod BuildScript.TerminalBuild -logFile /Users/lee/Desktop/Puzzle/build.log -quit

@@ -236,41 +236,59 @@ public class BuildScript
     {
         try
         {
-            // Create logs directory if it doesn't exist
-            string logsPath = Path.Combine(Directory.GetCurrentDirectory(), "Build", "Logs");
-            if (!Directory.Exists(logsPath))
+            // Create build directory if it doesn't exist
+            string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build");
+            if (!Directory.Exists(buildPath))
             {
-                Directory.CreateDirectory(logsPath);
+                Directory.CreateDirectory(buildPath);
             }
 
-            // Create log file
-            string logFile = Path.Combine(logsPath, $"build_log_{System.DateTime.Now:yyyyMMdd_HHmmss}.txt");
-            using (StreamWriter writer = new StreamWriter(logFile))
+            // Set build settings
+            PlayerSettings.SetScriptingBackend(BuildTargetGroup.Standalone, ScriptingImplementation.Mono2x);
+            PlayerSettings.SetApiCompatibilityLevel(BuildTargetGroup.Standalone, ApiCompatibilityLevel.NET_4_6);
+            PlayerSettings.stripEngineCode = false; // Disable code stripping for stability
+            PlayerSettings.allowUnsafeCode = false;
+
+            // Get scenes
+            string[] scenes = new string[] { "Assets/Scenes/GameScene.unity" };
+
+            // Build options
+            BuildOptions buildOptions = BuildOptions.None;
+
+            // Build for macOS
+            string appPath = Path.Combine(buildPath, "PuzzleGame.app");
+            Debug.Log($"Starting build to: {appPath}");
+
+            BuildReport report = BuildPipeline.BuildPlayer(scenes, appPath, BuildTarget.StandaloneOSX, buildOptions);
+
+            if (report.summary.result == BuildResult.Succeeded)
             {
-                writer.WriteLine($"Build started at: {System.DateTime.Now}");
-                writer.WriteLine($"Unity Version: {Application.unityVersion}");
-                writer.WriteLine($"Build Target: {EditorUserBuildSettings.activeBuildTarget}");
-                writer.WriteLine("----------------------------------------");
-
-                // Build the game
-                BuildAll();
-
-                writer.WriteLine("----------------------------------------");
-                writer.WriteLine($"Build completed at: {System.DateTime.Now}");
-                writer.WriteLine($"Build log saved to: {logFile}");
-            }
-
-            // Run the built game from terminal
-            string buildPath = Path.Combine(Directory.GetCurrentDirectory(), "Build", "PuzzleGame.app");
-            if (Directory.Exists(buildPath))
-            {
-                // Use the 'open' command on macOS
-                System.Diagnostics.Process.Start("open", buildPath);
-                Debug.Log($"Game started successfully! Build log: {logFile}");
+                Debug.Log("Build completed successfully!");
+                // Run the built game
+                if (Directory.Exists(appPath))
+                {
+                    System.Diagnostics.Process.Start("open", appPath);
+                    Debug.Log("Game started successfully!");
+                }
+                else
+                {
+                    throw new System.Exception($"Built game not found at: {appPath}");
+                }
             }
             else
             {
-                throw new System.Exception($"Built game not found at: {buildPath}");
+                Debug.LogError($"Build failed with result: {report.summary.result}");
+                Debug.LogError($"Total errors: {report.summary.totalErrors}");
+                Debug.LogError($"Total warnings: {report.summary.totalWarnings}");
+                foreach (var step in report.steps)
+                {
+                    Debug.LogError($"Build step: {step.name}, Duration: {step.duration.TotalSeconds}s");
+                    foreach (var message in step.messages)
+                    {
+                        Debug.LogError($"Message: {message.content}, Type: {message.type}");
+                    }
+                }
+                throw new System.Exception($"Build failed with result: {report.summary.result}");
             }
         }
         catch (System.Exception e)
