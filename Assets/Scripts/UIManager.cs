@@ -133,6 +133,6 @@ public class UIManager : MonoBehaviour
         isGameOver = false;
         gameOverPanel.SetActive(false);
         UpdateUI();
-        GameManagerTemp.Instance.RestartGame();
+        GameManager.Instance.RestartGame();
     }
 } 

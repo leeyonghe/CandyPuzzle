@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class GameManagerTemp : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static GameManagerTemp Instance { get; private set; }
+    public static GameManager Instance { get; private set; }
 
     [SerializeField] public int boardWidth = 8;
     [SerializeField] public int boardHeight = 8;
@@ -315,19 +315,5 @@ public class GameManagerTemp : MonoBehaviour
             return board[x, y];
         }
         return null;
-    }
-
-    private void CreateTestCandy()
-    {
-        Debug.Log("Creating test candy at (0,0,0)");
-        GameObject candy = Instantiate(candyPrefab, Vector3.zero, Quaternion.identity);
-        if (candy == null)
-        {
-            Debug.LogError("Failed to create test candy!");
-        }
-        else
-        {
-            Debug.Log("Test candy created successfully");
-        }
     }
 } 

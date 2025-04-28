@@ -100,28 +100,28 @@ public class CandyTile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         if (Mathf.Abs(angle) < 45f) // Right
         {
-            if (x < GameManagerTemp.Instance.boardWidth - 1)
-                neighbor = GameManagerTemp.Instance.GetTile(x + 1, y);
+            if (x < GameManager.Instance.boardWidth - 1)
+                neighbor = GameManager.Instance.GetTile(x + 1, y);
         }
         else if (Mathf.Abs(angle - 180f) < 45f) // Left
         {
             if (x > 0)
-                neighbor = GameManagerTemp.Instance.GetTile(x - 1, y);
+                neighbor = GameManager.Instance.GetTile(x - 1, y);
         }
         else if (Mathf.Abs(angle - 90f) < 45f) // Up
         {
-            if (y < GameManagerTemp.Instance.boardHeight - 1)
-                neighbor = GameManagerTemp.Instance.GetTile(x, y + 1);
+            if (y < GameManager.Instance.boardHeight - 1)
+                neighbor = GameManager.Instance.GetTile(x, y + 1);
         }
         else if (Mathf.Abs(angle + 90f) < 45f) // Down
         {
             if (y > 0)
-                neighbor = GameManagerTemp.Instance.GetTile(x, y - 1);
+                neighbor = GameManager.Instance.GetTile(x, y - 1);
         }
 
         if (neighbor != null)
         {
-            GameManagerTemp.Instance.SwapCandies(this, neighbor);
+            GameManager.Instance.SwapCandies(this, neighbor);
         }
     }
 } 

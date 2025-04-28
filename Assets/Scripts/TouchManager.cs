@@ -73,7 +73,7 @@ public class TouchManager : MonoBehaviour
                 
                 if (neighbor != null)
                 {
-                    GameManagerTemp.Instance.SwapCandies(selectedCandy, neighbor);
+                    GameManager.Instance.SwapCandies(selectedCandy, neighbor);
                 }
             }
             selectedCandy.OnPointerUp(new PointerEventData(EventSystem.current));
@@ -92,23 +92,23 @@ public class TouchManager : MonoBehaviour
 
         if (Mathf.Abs(angle) < 45f) // Right
         {
-            if (x < GameManagerTemp.Instance.boardWidth - 1)
-                return GameManagerTemp.Instance.GetTile(x + 1, y);
+            if (x < GameManager.Instance.boardWidth - 1)
+                return GameManager.Instance.GetTile(x + 1, y);
         }
         else if (Mathf.Abs(angle - 180f) < 45f) // Left
         {
             if (x > 0)
-                return GameManagerTemp.Instance.GetTile(x - 1, y);
+                return GameManager.Instance.GetTile(x - 1, y);
         }
         else if (Mathf.Abs(angle - 90f) < 45f) // Up
         {
-            if (y < GameManagerTemp.Instance.boardHeight - 1)
-                return GameManagerTemp.Instance.GetTile(x, y + 1);
+            if (y < GameManager.Instance.boardHeight - 1)
+                return GameManager.Instance.GetTile(x, y + 1);
         }
         else if (Mathf.Abs(angle + 90f) < 45f) // Down
         {
             if (y > 0)
-                return GameManagerTemp.Instance.GetTile(x, y - 1);
+                return GameManager.Instance.GetTile(x, y - 1);
         }
 
         return null;

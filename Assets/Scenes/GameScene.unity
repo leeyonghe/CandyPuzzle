@@ -307,8 +307,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00000000000000000000000000000000, type: 3}
-  m_Name: GameManagerTemp
+  m_Name: 
   m_EditorClassIdentifier: 
   boardWidth: 8
   boardHeight: 8
-  candySize: 1 
+  candySize: 1
+  candyPrefab: {fileID: 0}
+  specialCandyPrefab: {fileID: 0}
+  matchSound: {fileID: 0}
+  swapSound: {fileID: 0}
+  matchEffect: {fileID: 0} 

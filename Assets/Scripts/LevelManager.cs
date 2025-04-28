@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.SetTimeLimit(level.timeLimit);
         
         UpdateUI();
-        GameManagerTemp.Instance.RestartGame();
+        GameManager.Instance.RestartGame();
     }
 
     public void AddMatch()
