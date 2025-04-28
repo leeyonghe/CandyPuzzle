@@ -27,17 +27,35 @@ public class CandyTile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void Awake()
     {
-        Debug.Log("CandyTile Awake");
+        Debug.Log($"CandyTile Awake - GameObject: {gameObject.name}");
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
-            Debug.LogError("SpriteRenderer component not found!");
+            Debug.LogError($"SpriteRenderer component not found on {gameObject.name}! Adding one...");
+            spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
+        }
+        else
+        {
+            Debug.Log($"SpriteRenderer found on {gameObject.name}");
+        }
+
+        if (candySprites == null)
+        {
+            Debug.LogError($"CandySprites array is null on {gameObject.name}");
+        }
+        else
+        {
+            Debug.Log($"CandySprites array length: {candySprites.Length} on {gameObject.name}");
+            for (int i = 0; i < candySprites.Length; i++)
+            {
+                Debug.Log($"Sprite {i}: {(candySprites[i] == null ? "null" : candySprites[i].name)}");
+            }
         }
     }
 
     public void Initialize(int x, int y)
     {
-        Debug.Log($"Initializing candy at position ({x}, {y})");
+        Debug.Log($"Initializing candy at position ({x}, {y}) - GameObject: {gameObject.name}");
         this.x = x;
         this.y = y;
         SetRandomType();
@@ -51,77 +69,74 @@ public class CandyTile : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void SetType(CandyType newType)
     {
-        Debug.Log($"Setting candy type to {newType}");
+        Debug.Log($"Setting candy type to {newType} on {gameObject.name}");
         type = newType;
         if (type != CandyType.None)
         {
-            if (candySprites == null || candySprites.Length == 0)
+            if (candySprites == null)
             {
-                Debug.LogError("Candy sprites array is not set up!");
+                Debug.LogError($"Candy sprites array is null on {gameObject.name}!");
                 return;
             }
-            spriteRenderer.sprite = candySprites[(int)type - 1];
+            
+            if (candySprites.Length == 0)
+            {
+                Debug.LogError($"Candy sprites array is empty on {gameObject.name}!");
+                return;
+            }
+
+            int spriteIndex = (int)type - 1;
+            if (spriteIndex < 0 || spriteIndex >= candySprites.Length)
+            {
+                Debug.LogError($"Invalid sprite index: {spriteIndex} for type {type} on {gameObject.name}");
+                return;
+            }
+
+            if (candySprites[spriteIndex] == null)
+            {
+                Debug.LogError($"Sprite at index {spriteIndex} is null on {gameObject.name}!");
+                return;
+            }
+
+            spriteRenderer.sprite = candySprites[spriteIndex];
             spriteRenderer.enabled = true;
+            Debug.Log($"Successfully set sprite for type {type} on {gameObject.name}");
         }
         else
         {
             spriteRenderer.enabled = false;
+            Debug.Log($"Disabled sprite renderer for type None on {gameObject.name}");
         }
     }
 
     public void SetRandomType()
     {
-        Debug.Log("Setting random candy type");
-        if (candySprites == null || candySprites.Length == 0)
-        {
-            Debug.LogError("Candy sprites array is not set up!");
-            return;
-        }
         CandyType randomType = (CandyType)Random.Range(1, System.Enum.GetValues(typeof(CandyType)).Length);
+        Debug.Log($"Setting random type: {randomType} on {gameObject.name}");
         SetType(randomType);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        startPosition = eventData.position;
-        isDragging = true;
-        selectedCandy = this;
+        if (selectedCandy == null)
+        {
+            selectedCandy = this;
+            startPosition = transform.position;
+            isDragging = true;
+            Debug.Log($"Started dragging {gameObject.name}");
+        }
     }
 
-    public virtual void OnPointerUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
-        if (!isDragging) return;
-
-        isDragging = false;
-        Vector2 direction = (eventData.position - startPosition).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        CandyTile neighbor = null;
-
-        if (Mathf.Abs(angle) < 45f) // Right
+        if (isDragging)
         {
-            if (x < GameManager.Instance.boardWidth - 1)
-                neighbor = GameManager.Instance.GetTile(x + 1, y);
-        }
-        else if (Mathf.Abs(angle - 180f) < 45f) // Left
-        {
-            if (x > 0)
-                neighbor = GameManager.Instance.GetTile(x - 1, y);
-        }
-        else if (Mathf.Abs(angle - 90f) < 45f) // Up
-        {
-            if (y < GameManager.Instance.boardHeight - 1)
-                neighbor = GameManager.Instance.GetTile(x, y + 1);
-        }
-        else if (Mathf.Abs(angle + 90f) < 45f) // Down
-        {
-            if (y > 0)
-                neighbor = GameManager.Instance.GetTile(x, y - 1);
-        }
-
-        if (neighbor != null)
-        {
-            GameManager.Instance.SwapCandies(this, neighbor);
+            isDragging = false;
+            if (selectedCandy == this)
+            {
+                selectedCandy = null;
+                Debug.Log($"Stopped dragging {gameObject.name}");
+            }
         }
     }
 } 

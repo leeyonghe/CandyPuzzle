@@ -89,6 +89,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("Initializing board");
         board = new CandyTile[boardWidth, boardHeight];
 
+        if (candyPrefab == null)
+        {
+            Debug.LogError("Candy prefab is not assigned!");
+            return;
+        }
+
         // Calculate the starting position to center the board
         float startX = -(boardWidth * candySize) / 2f + candySize / 2f;
         float startY = -(boardHeight * candySize) / 2f + candySize / 2f;
@@ -114,14 +120,16 @@ public class GameManager : MonoBehaviour
                     continue;
                 }
                 
-                board[x, y] = candy.GetComponent<CandyTile>();
-                if (board[x, y] == null)
+                CandyTile candyTile = candy.GetComponent<CandyTile>();
+                if (candyTile == null)
                 {
                     Debug.LogError($"CandyTile component not found on instantiated candy at ({x}, {y})");
+                    Destroy(candy);
                     continue;
                 }
                 
-                board[x, y].Initialize(x, y);
+                board[x, y] = candyTile;
+                candyTile.Initialize(x, y);
                 Debug.Log($"Created candy at position ({x}, {y})");
             }
         }
@@ -325,8 +333,23 @@ public class GameManager : MonoBehaviour
                     );
 
                     GameObject candy = Instantiate(candyPrefab, position, Quaternion.identity);
-                    board[x, y] = candy.GetComponent<CandyTile>();
-                    board[x, y].Initialize(x, y);
+                    if (candy == null)
+                    {
+                        Debug.LogError($"Failed to instantiate new candy at position ({x}, {y})");
+                        continue;
+                    }
+
+                    CandyTile candyTile = candy.GetComponent<CandyTile>();
+                    if (candyTile == null)
+                    {
+                        Debug.LogError($"CandyTile component not found on new candy at ({x}, {y})");
+                        Destroy(candy);
+                        continue;
+                    }
+
+                    board[x, y] = candyTile;
+                    candyTile.Initialize(x, y);
+                    Debug.Log($"Created new candy at position ({x}, {y})");
                 }
             }
         }
@@ -335,11 +358,7 @@ public class GameManager : MonoBehaviour
 
         if (CheckMatches())
         {
-            RemoveMatches();
-        }
-        else
-        {
-            isSwapping = false;
+            StartCoroutine(HandleMatches());
         }
     }
 
