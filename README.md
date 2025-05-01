@@ -3,6 +3,8 @@
 A Unity-based puzzle game project. [Debugging in progress]
 Unity 기반의 퍼즐 게임 프로젝트입니다. [디버깅중]
 
+stable-diffusion-webui-docker 
+
 ## Project Structure / 프로젝트 구조
 
 - `Assets/` - Contains all game assets including scripts, prefabs, scenes, and resources
