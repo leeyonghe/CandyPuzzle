@@ -3,7 +3,7 @@
 A Unity-based puzzle game project. [Debugging in progress]
 Unity 기반의 퍼즐 게임 프로젝트입니다. [디버깅중]
 
-stable-diffusion-webui-docker 
+핵심방법 : stable-diffusion-webui-docker를 이용해 게임 이미지를 생성해 게임 이미지로 사용
 
 ## Project Structure / 프로젝트 구조
 
